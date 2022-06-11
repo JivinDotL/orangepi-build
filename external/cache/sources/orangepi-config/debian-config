@@ -170,7 +170,7 @@ fi
 			t=$t" options may have difficulties if you alter system settings manually.\n"
                         t=$t"\n\Z1Documentation:\Z0    http://www.orangepi.org"
 			t=$t"\n\n\Z1Support:\Z0    http://www.orangepi.org\n"
-                        t=$t"\n\Z1Sources:\Z0    https://github.com/orangepi-xunlong"
+                        t=$t"\n\Z1Sources:\Z0    git@github.com:orangepi-xunlong"
 			show_box "Info" "$t" "18"
 		;;
 	esac

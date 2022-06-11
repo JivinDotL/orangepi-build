@@ -38,7 +38,7 @@ function install_sunxi-tools()
 	        sudo apt-get update
 	        apt-get -f -qq -y install libusb-1.0-0-dev || (echo -e "Aborted\nNot possible to install a sunxi-tools requirement" ; exit 1)
 	        cd /tmp
-	        git clone https://github.com/linux-sunxi/sunxi-tools
+	        git clone git@github.com:linux-sunxi/sunxi-tools
 	        cd sunxi-tools
 	        make
 	        make install

@@ -62,7 +62,7 @@ prepare_boot_configuration()
 	if [[ $BOOT_USE_MAINLINE_ATF == yes ]]; then
 
 		UBOOT_TARGET_MAP="BL31=bl31.bin idbloader.img u-boot.itb;;idbloader.img u-boot.itb"
-		ATFSOURCE='https://github.com/ARM-software/arm-trusted-firmware'
+		ATFSOURCE='git@github.com:ARM-software/arm-trusted-firmware'
 		ATF_COMPILER='aarch64-linux-gnu-'
 		ATFDIR='arm-trusted-firmware'
 		ATFBRANCH='tag:v2.2'
@@ -93,7 +93,7 @@ prepare_boot_configuration()
 	elif [[ $BOOT_RK3328_USE_AYUFAN_ATF == yes ]]; then # to be removed
 
 		UBOOT_TARGET_MAP=";;idbloader.bin uboot.img trust.bin"
-		ATFSOURCE='https://github.com/ayufan-rock64/arm-trusted-firmware'
+		ATFSOURCE='git@github.com:ayufan-rock64/arm-trusted-firmware'
 		ATF_COMPILER='aarch64-linux-gnu-'
 		ATFDIR='arm-trusted-firmware-rockchip64'
 		ATFBRANCH='branch:rockchip'
@@ -115,7 +115,7 @@ prepare_boot_configuration()
 legacy_uboot_locations()
 {
 
-	BOOTSOURCE='https://github.com/ayufan-rock64/linux-u-boot'
+	BOOTSOURCE='git@github.com:ayufan-rock64/linux-u-boot'
 	BOOTDIR='u-boot-rockchip64'
 	BOOTBRANCH='branch:rockchip-master'
 	case $BRANCH in

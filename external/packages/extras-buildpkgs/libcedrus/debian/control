@@ -5,8 +5,8 @@ Maintainer: Simon Eisenmann <simon@longsleep.org>
 Build-Depends:
  debhelper (>= 9),
 Standards-Version: 3.9.7
-Vcs-Git: https://github.com/linux-sunxi/libcedrus
-Vcs-Browser: https://github.com/linux-sunxi/libcedrus
+Vcs-Git: git@github.com:linux-sunxi/libcedrus
+Vcs-Browser: git@github.com:linux-sunxi/libcedrus
 
 Package: libcedrus1
 Section: libs

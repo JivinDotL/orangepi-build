@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: libcedrus
-Source: https://github.com/linux-sunxi/libvdpau-sunxi
+Source: git@github.com:linux-sunxi/libvdpau-sunxi
 
 Files: *
 Copyright: Copyright (c) 2013 Jens Kuske <jenskuske@gmail.com>

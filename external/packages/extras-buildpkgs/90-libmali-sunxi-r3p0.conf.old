@@ -2,7 +2,7 @@
 # depends on libUMP
 # depends on libdri2 on Jessie
 local package_name="libmali-sunxi-r3p0"
-local package_repo="https://github.com/linux-sunxi/sunxi-mali.git"
+local package_repo="git@github.com:linux-sunxi/sunxi-mali.git"
 local package_ref="branch:master"
 local package_builddeps="xutils-dev libdrm-dev libxfixes-dev libegl1-mesa-dev libgles1-mesa-dev libgles2-mesa-dev"
 local package_builddeps_xenial="libdri2-dev"

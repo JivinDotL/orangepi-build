@@ -10,7 +10,7 @@ git_rev := $(shell echo '$(upstream_version)' | sed 's/.*+//')
 get-orig-source:
 	rm -rf $(deb_source)-$(upstream_version)
 	rm -f $(deb_source)-$(upstream_version).orig.tar.gz
-	git clone https://github.com/robclark/libdri2.git $(deb_source)-$(upstream_version)
+	git clone git@github.com:robclark/libdri2.git $(deb_source)-$(upstream_version)
 	cd $(deb_source)-$(upstream_version) && git archive \
 		--format=tar \
 		--prefix=$(deb_source)-$(upstream_version)/ \

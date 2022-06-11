@@ -8,8 +8,8 @@ Build-Depends:
  dh-autoreconf,
  pkg-config,
 Standards-Version: 3.9.2
-Vcs-Git: https://github.com/libv/libump
-Vcs-Browser: https://github.com/libv/libump
+Vcs-Git: git@github.com:libv/libump
+Vcs-Browser: git@github.com:libv/libump
 
 Package: libump
 Section: libs

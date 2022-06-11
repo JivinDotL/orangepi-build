@@ -60,9 +60,9 @@ esac
 MAINLINE_KERNEL_DIR="$SRC/kernel"
 
 if [[ $USE_GITHUB_UBOOT_MIRROR == yes ]]; then
-	MAINLINE_UBOOT_SOURCE='https://github.com/RobertCNelson/u-boot'
+	MAINLINE_UBOOT_SOURCE='git@github.com:RobertCNelson/u-boot'
 else
-	MAINLINE_UBOOT_SOURCE='https://github.com/orangepi-xunlong/u-boot-orangepi.git'
+	MAINLINE_UBOOT_SOURCE='git@github.com:orangepi-xunlong/u-boot-orangepi.git'
 fi
 MAINLINE_UBOOT_DIR="$SRC/u-boot"
 

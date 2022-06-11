@@ -388,11 +388,11 @@ display_alert "Downloading sources" "" "info"
 		fetch_from_repo "$ATFSOURCE" "${EXTER}/cache/sources/$ATFDIR" "$ATFBRANCH" "yes"
 	fi
 	
-	fetch_from_repo "https://github.com/linux-sunxi/sunxi-tools" "${EXTER}/cache/sources/sunxi-tools" "branch:master"
-	fetch_from_repo "https://github.com/armbian/rkbin" "${EXTER}/cache/sources/rkbin-tools" "branch:master"
+	fetch_from_repo "git@github.com:linux-sunxi/sunxi-tools" "${EXTER}/cache/sources/sunxi-tools" "branch:master"
+	fetch_from_repo "git@github.com:armbian/rkbin" "${EXTER}/cache/sources/rkbin-tools" "branch:master"
 
 	if [[ $BOARD == orangepi4 ]]; then
-		fetch_from_repo "https://github.com/orangepi-xunlong/rk3399_gst_xserver_libs.git" "${EXTER}/cache/sources/rk3399_gst_xserver_libs" "branch:main"
+		fetch_from_repo "git@github.com:orangepi-xunlong/rk3399_gst_xserver_libs.git" "${EXTER}/cache/sources/rk3399_gst_xserver_libs" "branch:main"
 	fi
 fi
 

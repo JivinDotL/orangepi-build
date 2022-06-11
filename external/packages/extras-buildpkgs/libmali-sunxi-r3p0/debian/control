@@ -9,7 +9,7 @@ Build-Depends:
  libxfixes-dev,
 Standards-Version: 3.9.5
 Section: libs
-Homepage: https://github.com/linux-sunxi/sunxi-mali/
+Homepage: git@github.com:linux-sunxi/sunxi-mali/
 
 Package: libmali-sunxi-r3p0
 Architecture: any

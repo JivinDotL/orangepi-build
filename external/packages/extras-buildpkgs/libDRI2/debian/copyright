@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Contact: Rob Clark <rob@ti.com>
-Source: https://github.com/robclark/libdri2.git
+Source: git@github.com:robclark/libdri2.git
 
 Files: *
 Copyright: 2005-2008, Red Hat, Inc.

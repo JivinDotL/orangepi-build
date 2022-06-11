@@ -50,7 +50,7 @@ function initialize_lte ()
 
 # This content is published under Creative Commons Attribution 4.0
 # International (CC BY 4.0) license.
-# Source repository: https://github.com/ssinyagin/wwan_udev_rules
+# Source repository: git@github.com:ssinyagin/wwan_udev_rules
 
 if ! check_if_installed ppp then; then
 	apt-get -y -qq install ppp >/dev/null 2>&1
@@ -58,7 +58,7 @@ fi
 cat >/etc/udev/rules.d/99-wwan.rules <<'EOT'
 
 
-# Source repository: https://github.com/ssinyagin/wwan_udev_rules
+# Source repository: git@github.com:ssinyagin/wwan_udev_rules
 
 # Huawei ME909s-120 LTE modem
 SUBSYSTEM=="tty", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="15c1", SYMLINK+="ttyWWAN%E{ID_USB_INTERFACE_NUM}"

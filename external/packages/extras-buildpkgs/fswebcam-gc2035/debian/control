@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Luca Niccoli <lultimouomo@gmail.com>
 Build-Depends: debhelper (>= 9.20120417), libgd2-noxpm-dev | libgd2-xpm-dev, libv4l-dev
 Standards-Version: 3.9.5
-Homepage: https://github.com/avafinger/fswebcam
+Homepage: git@github.com:avafinger/fswebcam
 
 Package: fswebcam-gc2035
 Architecture: linux-any

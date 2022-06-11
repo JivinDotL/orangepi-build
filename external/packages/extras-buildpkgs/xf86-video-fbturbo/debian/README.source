@@ -43,7 +43,7 @@ XV overlay is supported on Allwinner A10/A13/A20.
 
 == Installation instructions ==
 
-https://github.com/ssvb/xf86-video-fbturbo/wiki/Installation
+git@github.com:ssvb/xf86-video-fbturbo/wiki/Installation
 
 == Troubleshooting ==
 
@@ -82,12 +82,12 @@ at freenode.net irc. I'm known as "ssvb" there. The platforms other than
 allwinner/sunxi are also supported.
 
 Or alternatively just use the issue tracker for reporting bugs:
-     https://github.com/ssvb/xf86-video-fbturbo/issues
+     git@github.com:ssvb/xf86-video-fbturbo/issues
 
 == Links to the other interesting projects ==
 
 - http://limadriver.org
-- https://github.com/jemk/libvdpau-sunxi
+- git@github.com:jemk/libvdpau-sunxi
 
 == TL;DR ==
 

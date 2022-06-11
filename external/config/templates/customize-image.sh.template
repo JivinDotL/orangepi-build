@@ -54,11 +54,11 @@ InstallOpenMediaVault() {
 	case ${RELEASE} in
 		jessie)
 			OMV_Name="erasmus"
-			OMV_EXTRAS_URL="https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/openmediavault-omvextrasorg_latest_all3.deb"
+			OMV_EXTRAS_URL="git@github.com:OpenMediaVault-Plugin-Developers/packages/raw/master/openmediavault-omvextrasorg_latest_all3.deb"
 			;;
 		stretch)
 			OMV_Name="arrakis"
-			OMV_EXTRAS_URL="https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/openmediavault-omvextrasorg_latest_all4.deb"
+			OMV_EXTRAS_URL="git@github.com:OpenMediaVault-Plugin-Developers/packages/raw/master/openmediavault-omvextrasorg_latest_all4.deb"
 			;;
 	esac
 

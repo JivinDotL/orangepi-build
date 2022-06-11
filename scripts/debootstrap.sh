@@ -541,7 +541,7 @@ prepare_partitions()
 #
 # since Debian buster, it has to be called within create_image() on the $MOUNT
 # path instead of $SDCARD (which can be a tmpfs and breaks cryptsetup-initramfs).
-# see: https://github.com/armbian/build/issues/1584
+# see: git@github.com:armbian/build/issues/1584
 #
 update_initramfs()
 {
