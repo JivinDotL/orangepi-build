@@ -674,9 +674,10 @@ prepare_host()
 	bison libbison-dev flex libfl-dev cryptsetup gpg gnupg1 gpgv1 gpgv2 cpio aria2 pigz dirmngr python3-distutils distcc git dos2unix"
 
 	local codename=$(lsb_release -sc)
-
+    
+	# ln -fs /usr/bin/python3.10 /usr/bin/python
 	# Getting ready for Ubuntu 20.04
-	if [[ $codename == focal || $codename == ulyana ]]; then
+	if [[ "$codename" == "focal" || "$codename" == "ulyana" ]]; then
 		hostdeps+=" python2 python3"
 		ln -fs /usr/bin/python2.7 /usr/bin/python2
 		ln -fs /usr/bin/python2.7 /usr/bin/python
@@ -705,7 +706,7 @@ prepare_host()
 		exit_with_error "Windows subsystem for Linux is not a supported build environment"
 	fi
 
-	if [[ -z $codename || "focal" == "$codename" || "eoan" == "$codename"  || "debbie" == "$codename"  || "buster" == "$codename" || "ulyana" == "$codename" || "jammy" == "$codename"]]; then
+	if [[ -z $codename || "focal" == "$codename" || "eoan" == "$codename"  || "debbie" == "$codename"  || "buster" == "$codename" || "ulyana" == "$codename" || "jammy" == "$codename" ]]; then
 	    hostdeps="${hostdeps/lib32ncurses5 lib32tinfo5/lib32ncurses6 lib32tinfo6}"
 	fi
 
@@ -814,7 +815,7 @@ prepare_host()
 	done
 	USE_TORRENT=${USE_TORRENT_STATUS}
 
-	rm -rf $SRC/toolchains/*.tar.xz*
+#	rm -rf $SRC/toolchains/*.tar.xz*
 	local existing_dirs=( $(ls -1 $SRC/toolchains) )
 	for dir in ${existing_dirs[@]}; do
 		local found=no
@@ -863,9 +864,6 @@ prepare_host()
 		read
 	fi
 }
-
-
-
 
 function webseed ()
 {

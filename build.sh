@@ -10,7 +10,6 @@
 # use configuration files like config-default.conf to set the build configuration
 # check Orange Pi documentation for more info
 # set -vx
-
 SRC="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
 
 # check for whitespace in $SRC and exit for safety reasons

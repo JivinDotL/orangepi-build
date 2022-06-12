@@ -314,6 +314,13 @@ if [[ ${BUILD_OPT} == image || ${BUILD_OPT} == rootfs ]]; then
 	fi
 fi
 
+if [[ $VSCODE == yes ]]; then
+	RELEASE=focal
+	BUILD_MINIMAL=no
+	echo RELEASE=$RELEASE
+	echo BUILD_MINIMAL=$BUILD_MINIMAL
+fi
+
 #prevent conflicting setup
 [[ $BUILD_DESKTOP == yes ]] && BUILD_MINIMAL=no
 [[ $BUILD_DESKTOP == yes ]] && IMAGETYPE="desktop"

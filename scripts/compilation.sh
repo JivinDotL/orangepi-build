@@ -384,13 +384,14 @@ compile_kernel()
 				'make ARCH=$ARCHITECTURE CROSS_COMPILE="$CCACHE $KERNEL_COMPILER" olddefconfig'
 		fi
 	else
+	    if [[ -z $VSCODE ]]; then
 		eval CCACHE_BASEDIR="$(pwd)" env PATH="${toolchain}:${PATH}" \
 			'make $CTHREADS ARCH=$ARCHITECTURE CROSS_COMPILE="$CCACHE $KERNEL_COMPILER" oldconfig'
 		eval CCACHE_BASEDIR="$(pwd)" env PATH="${toolchain}:${PATH}" \
 			'make $CTHREADS ARCH=$ARCHITECTURE CROSS_COMPILE="$CCACHE $KERNEL_COMPILER" ${KERNEL_MENUCONFIG:-menuconfig}'
 
 		[[ ${PIPESTATUS[0]} -ne 0 ]] && exit_with_error "Error kernel menuconfig failed"
-
+        fi
 		# store kernel config in easily reachable place
 		display_alert "Exporting new kernel config" "$DEST/config/$LINUXCONFIG.config" "info"
 		cp .config "${DEST}/config/${LINUXCONFIG}.config"
@@ -417,10 +418,11 @@ compile_kernel()
 		--progressbox "Compiling kernel..." $TTY_Y $TTY_X'} \
 		${OUTPUT_VERYSILENT:+' >/dev/null 2>/dev/null'}
 
+    if [[ -z $VSCODE ]]; then
 	if [[ ${PIPESTATUS[0]} -ne 0 || ! -f arch/$ARCHITECTURE/boot/$KERNEL_IMAGE_TYPE ]]; then
 		exit_with_error "Kernel was not built" "@host"
 	fi
-
+	fi
 	# different packaging for 4.3+
 	if linux-version compare "${version}" ge 4.3; then
 		local kernel_packing="bindeb-pkg"
@@ -467,12 +469,13 @@ compile_kernel()
 		fakeroot dpkg-deb -z0 -b "${sources_pkg_dir}" "${sources_pkg_dir}.deb"
 		mv "${sources_pkg_dir}.deb" "${DEB_STORAGE}/"
 	fi
-	rm -rf "${sources_pkg_dir}"
+#	rm -rf "${sources_pkg_dir}"
 
 	cd .. || exit
 	# remove firmare image packages here - easier than patching ~40 packaging scripts at once
-	rm -f linux-firmware-image-*.deb
-	mv ./*.deb "${DEB_STORAGE}/" || exit_with_error "Failed moving kernel DEBs"
+#	rm -f linux-firmware-image-*.deb
+#	mv ./*.deb "${DEB_STORAGE}/" || exit_with_error "Failed moving kernel DEBs"
+    mv ./*.deb "${DEB_STORAGE}/"
 
 	# store git hash to the file
 	echo "${hash}" > "${EXTER}/cache/hash/linux-image-${BRANCH}-${LINUXFAMILY}.githash"
